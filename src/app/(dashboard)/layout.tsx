@@ -36,15 +36,17 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex">
-      <aside className="hidden md:flex w-60 border-r border-slate-900 bg-slate-950/95 p-4 flex-col gap-2">
-        <div className="flex items-center gap-2 mb-4">
-          <div className="h-7 w-7 rounded-full bg-gradient-to-br from-sky-400 to-blue-600 shadow-[0_0_24px_rgba(37,99,235,0.7)]" />
+      <aside className="hidden md:flex w-64 border-r border-slate-900 bg-slate-950/95 p-5 flex-col gap-3">
+        <div className="flex items-center gap-3 mb-5">
+          <div className="h-8 w-8 rounded-2xl bg-gradient-to-br from-slate-100 via-slate-300 to-slate-500 shadow-[0_0_28px_rgba(148,163,184,0.8)]" />
           <div>
-            <p className="text-sm font-semibold tracking-tight">TradeSphere X</p>
+            <p className="text-sm font-semibold tracking-tight text-slate-50">
+              TradeSphere X
+            </p>
             <p className="text-[11px] text-slate-400">Institutional Terminal</p>
           </div>
         </div>
-        <nav className="space-y-1 text-xs">
+        <nav className="space-y-1.5 text-xs">
           <NavButton label="Overview" href="/dashboard" active={pathname === '/dashboard'} />
           <NavButton label="Trade Terminal" href="/trade-terminal" active={pathname === '/trade-terminal'} />
           <NavButton label="Live Analytics" href="/live-analytics" active={pathname === '/live-analytics'} />
@@ -116,9 +118,9 @@ function NavButton({ label, href, active }: NavButtonProps) {
   return (
     <button
       onClick={() => router.push(href)}
-      className={`w-full text-left px-3 py-2 rounded-md text-xs transition-colors ${
+      className={`w-full text-left px-3.5 py-2 rounded-lg text-xs transition-colors ${
         active
-          ? 'bg-slate-900 text-sky-300 border border-sky-500/50 shadow-[0_0_16px_rgba(56,189,248,0.55)]'
+          ? 'bg-slate-900 text-slate-50 border border-slate-500 shadow-[0_0_18px_rgba(15,23,42,0.9)]'
           : 'text-slate-300 hover:bg-slate-900/70'
       }`}
     >
