@@ -32,8 +32,8 @@ export default function DashboardPage() {
   );
 
   return (
-    <div className="space-y-4">
-      <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
+    <div className="space-y-5">
+      <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
         {overviewMetrics.map((m) => (
           <motion.div
             key={m.label}
@@ -51,13 +51,13 @@ export default function DashboardPage() {
         ))}
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
         <motion.div
           initial={{ opacity: 0, x: -8 }}
           animate={{ opacity: 1, x: 0 }}
-          className="space-y-2"
+          className="space-y-3"
         >
-          <h2 className="text-xs font-semibold text-slate-200">
+          <h2 className="text-sm font-semibold text-slate-100">
             Equity Curve (demo)
           </h2>
           <EquityCurve data={equityPoints} />
