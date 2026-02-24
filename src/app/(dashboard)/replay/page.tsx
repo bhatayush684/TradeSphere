@@ -56,7 +56,7 @@ export default function ReplayPage() {
       </p>
       <div className="flex items-center gap-2 text-sm">
         <button
-          className="px-3 py-1.5 rounded bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400"
+          className="px-3 py-1.5 rounded bg-slate-50 text-slate-950 font-semibold hover:bg-white"
           onClick={() => setPlaying(true)}
         >
           Play
@@ -98,8 +98,8 @@ export default function ReplayPage() {
             <Area
               type="monotone"
               dataKey="close"
-              stroke="#38bdf8"
-              fill="#0f172a"
+              stroke="#e5e7eb"
+              fill="#020617"
               strokeWidth={2}
               dot={false}
             />
@@ -108,7 +108,7 @@ export default function ReplayPage() {
       </div>
       <p className="text-sm text-slate-300">
         Replay PnL:{' '}
-        <span className={pnl >= 0 ? 'text-emerald-400' : 'text-red-400'}>
+        <span className="text-slate-100">
           {pnl.toFixed(2)} pts
         </span>
       </p>

@@ -21,7 +21,7 @@ export default function ReportsPage() {
         <Metric label="Loss Rate" value={analytics.lossRate} suffix="%" />
       </div>
       <div className="flex items-center gap-2 text-sm pt-2">
-        <button className="px-3 py-1.5 rounded bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400">
+        <button className="px-3 py-1.5 rounded bg-slate-50 text-slate-950 font-semibold hover:bg-white">
           Download PDF (UI only)
         </button>
         <label className="flex items-center gap-1 text-slate-300">

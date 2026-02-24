@@ -14,8 +14,8 @@ import {
   Tooltip,
 } from 'recharts';
 
-const WIN_COLOR = '#22c55e';
-const LOSS_COLOR = '#ef4444';
+const WIN_COLOR = '#e5e7eb';
+const LOSS_COLOR = '#4b5563';
 
 export default function LiveAnalyticsPage() {
   const { analytics, account, closedTrades } = useTradingStore();
@@ -124,8 +124,8 @@ export default function LiveAnalyticsPage() {
                 <Area
                   type="monotone"
                   dataKey="equity"
-                  stroke="#38bdf8"
-                  fill="#0f172a"
+                  stroke="#e5e7eb"
+                  fill="#020617"
                   strokeWidth={2}
                   dot={false}
                 />
@@ -135,20 +135,16 @@ export default function LiveAnalyticsPage() {
         </div>
       </section>
       <section className="rounded-xl border border-slate-900 bg-slate-950/80 p-4">
-        <h2 className="text-xs font-semibold text-slate-100 mb-2">Account State</h2>
+        <h2 className="text-sm font-semibold text-slate-100 mb-2">Account State</h2>
         <p className="text-sm text-slate-300">
           Balance:{' '}
-          <span className="text-sky-300">{account.balance.toFixed(0)} USD</span>
+          <span className="text-slate-100">{account.balance.toFixed(0)} USD</span>
           <br />
           Equity:{' '}
-          <span className="text-sky-300">{account.equity.toFixed(0)} USD</span>
+          <span className="text-slate-100">{account.equity.toFixed(0)} USD</span>
           <br />
           Daily PnL:{' '}
-          <span
-            className={
-              account.dailyPnL >= 0 ? 'text-emerald-400' : 'text-red-400'
-            }
-          >
+          <span className="text-slate-200">
             {account.dailyPnL.toFixed(0)} USD
           </span>
         </p>

@@ -72,7 +72,7 @@ export default function TradeTerminalPage() {
           </div>
           <button
             onClick={() => setShowBrokerModal(true)}
-            className="text-[11px] px-2 py-1 rounded border border-sky-500/60 text-sky-300 hover:bg-sky-500/10"
+            className="text-[11px] px-2 py-1 rounded border border-slate-500/70 text-slate-100 hover:bg-slate-900/80"
           >
             Connect Broker
           </button>
@@ -165,20 +165,13 @@ export default function TradeTerminalPage() {
           <button
             type="submit"
             disabled={placingOrder}
-            className="mt-2 w-full rounded bg-sky-500 text-slate-950 py-2 text-xs font-semibold hover:bg-sky-400 transition-colors disabled:opacity-60"
+            className="mt-3 w-full rounded bg-slate-50 text-slate-900 py-2.5 text-xs font-semibold hover:bg-white transition-colors disabled:opacity-60"
           >
             {placingOrder ? 'Placing…' : 'Place Trade'}
           </button>
 
-          <p className="text-[11px] text-slate-300 mt-1">
-            Balance{' '}
-            <span className="text-sky-300">
-              {account.balance.toFixed(0)} USD
-            </span>{' '}
-            · Equity{' '}
-            <span className="text-sky-300">
-              {account.equity.toFixed(0)} USD
-            </span>
+          <p className="text-[11px] text-slate-300 mt-2">
+            Balance {account.balance.toFixed(0)} USD · Equity {account.equity.toFixed(0)} USD
           </p>
         </form>
       </motion.section>
@@ -210,10 +203,10 @@ export default function TradeTerminalPage() {
                 </span>
               </div>
               <div className="flex items-baseline justify-between mt-1">
-                <span className="text-[11px] text-emerald-400">
+                <span className="text-[11px] text-slate-100">
                   {p.bid.toFixed(4)}
                 </span>
-                <span className="text-[11px] text-sky-400">
+                <span className="text-[11px] text-slate-400">
                   {p.ask.toFixed(4)}
                 </span>
               </div>
@@ -255,11 +248,7 @@ export default function TradeTerminalPage() {
                     <td className="py-1.5 pr-2">{t.id.slice(-6)}</td>
                     <td className="py-1.5 pr-2">{t.instrument}</td>
                     <td className="py-1.5 pr-2">
-                      <span
-                        className={
-                          t.direction === 'long' ? 'text-emerald-400' : 'text-red-400'
-                        }
-                      >
+                      <span className="text-slate-100">
                         {t.direction.toUpperCase()}
                       </span>
                     </td>
@@ -272,11 +261,7 @@ export default function TradeTerminalPage() {
                     <td className="py-1.5 pr-2 text-right">
                       {t.takeProfit.toFixed(4)}
                     </td>
-                    <td
-                      className={`py-1.5 pl-2 text-right ${
-                        t.pnl >= 0 ? 'text-emerald-400' : 'text-red-400'
-                      }`}
-                    >
+                    <td className="py-1.5 pl-2 text-right text-slate-100">
                       {t.pnl.toFixed(0)}
                     </td>
                   </tr>
@@ -352,7 +337,7 @@ export default function TradeTerminalPage() {
               </button>
               <button
                 type="submit"
-                className="px-3 py-1 rounded bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400"
+                className="px-3 py-1 rounded bg-slate-50 text-slate-900 font-semibold hover:bg-white"
               >
                 Connect
               </button>

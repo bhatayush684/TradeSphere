@@ -67,8 +67,8 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       <main className="flex-1 flex flex-col pb-12 md:pb-0">
         <header className="h-14 border-b border-slate-900 px-4 flex items-center justify-between">
           <div className="flex items-center gap-2 md:hidden">
-            <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-400 to-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.7)]" />
-            <span className="text-sm font-semibold">TradeSphere X</span>
+            <div className="h-6 w-6 rounded-full bg-gradient-to-br from-slate-100 via-slate-300 to-slate-500 shadow-[0_0_20px_rgba(148,163,184,0.8)]" />
+            <span className="text-sm font-semibold text-slate-50">TradeSphere X</span>
           </div>
           <p className="text-xs text-slate-400">
             Real-time simulated trading environment — all metrics update as mock markets move.
@@ -142,9 +142,9 @@ function MobileTab({
   return (
     <button
       onClick={() => router.push(href)}
-      className={`px-2 py-1 rounded-md ${
+      className={`px-2.5 py-1 rounded-md ${
         active
-          ? 'text-sky-300 bg-slate-900/80'
+          ? 'text-slate-50 bg-slate-900/90'
           : 'text-slate-400 hover:text-slate-100'
       }`}
     >

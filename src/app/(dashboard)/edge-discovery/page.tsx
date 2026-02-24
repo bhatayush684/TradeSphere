@@ -17,7 +17,7 @@ export default function EdgeDiscoveryPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-[11px]">
         <div className="rounded-lg border border-slate-800 bg-slate-950/60 p-3">
           <p className="text-[10px] text-slate-400 mb-1">Best Instrument</p>
-          <p className="text-xs font-semibold text-sky-300">
+          <p className="text-xs font-semibold text-slate-100">
             {analytics.bestInstrument ?? 'Awaiting data'}
           </p>
           <p className="mt-1 text-[10px] text-slate-500">
@@ -35,7 +35,7 @@ export default function EdgeDiscoveryPage() {
         </div>
         <div className="rounded-lg border border-slate-800 bg-slate-950/60 p-3">
           <p className="text-[10px] text-slate-400 mb-1">Edge Confidence</p>
-          <p className="text-xs font-semibold text-emerald-400">
+          <p className="text-xs font-semibold text-slate-100">
             {Math.max(0, 100 - analytics.overtradingScore).toFixed(0)} / 100
           </p>
           <p className="mt-1 text-[10px] text-slate-500">

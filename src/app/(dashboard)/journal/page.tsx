@@ -42,11 +42,7 @@ export default function JournalPage() {
                 <tr key={entry.id} className="border-b border-slate-900/60">
                   <td className="py-1.5 pr-2">{entry.tradeId.slice(-6)}</td>
                   <td className="py-1.5 pr-2">{entry.snapshot.instrument}</td>
-                  <td
-                    className={`py-1.5 pr-2 text-right ${
-                      entry.snapshot.pnl >= 0 ? 'text-emerald-400' : 'text-red-400'
-                    }`}
-                  >
+                  <td className="py-1.5 pr-2 text-right text-slate-100">
                     {entry.snapshot.pnl.toFixed(0)}
                   </td>
                   <td className="py-1.5 pr-2 text-right">

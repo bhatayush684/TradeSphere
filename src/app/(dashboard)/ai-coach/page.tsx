@@ -37,7 +37,7 @@ export default function AICoachPage() {
           <button
             onClick={handleAsk}
             disabled={loading}
-            className="px-4 py-1.5 rounded bg-sky-500 text-slate-950 text-xs font-semibold hover:bg-sky-400 disabled:opacity-60"
+            className="px-4 py-1.5 rounded bg-slate-50 text-slate-950 text-xs font-semibold hover:bg-white disabled:opacity-60"
           >
             {loading ? 'Thinking…' : 'Ask Coach'}
           </button>

@@ -89,7 +89,7 @@ export default function DashboardPage() {
           </h2>
           <p className="text-[12px] text-slate-300">
             Best instrument:{' '}
-            <span className="text-sky-300">
+            <span className="text-slate-100">
               {analytics.bestInstrument ?? 'TBD'}
             </span>
             <br />
@@ -117,9 +117,9 @@ interface MetricCardProps {
 function MetricCard({ label, value, suffix, highlight }: MetricCardProps) {
   return (
     <div
-      className={`rounded-xl border px-3 py-2 flex flex-col gap-1 bg-slate-900/80 ${
+      className={`rounded-xl border px-3 py-3 flex flex-col gap-1 bg-slate-900/85 ${
         highlight
-          ? 'border-sky-500/70 shadow-[0_0_24px_rgba(56,189,248,0.55)]'
+          ? 'border-slate-400 shadow-[0_0_24px_rgba(15,23,42,0.9)]'
           : 'border-slate-800'
       }`}
     >
